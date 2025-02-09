@@ -37,7 +37,7 @@ public class StatsServiceTest {
     public void theSumOfAllSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedSum = 180;
         long actualSum = service.amountSales(sales);
@@ -51,7 +51,7 @@ public class StatsServiceTest {
     public void theAverageAmountOfSalesPerMonth() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedAverage = 15;
         double actualAverage = service.averageSales(sales);
@@ -65,7 +65,7 @@ public class StatsServiceTest {
     public void monthsWithBelowAverageSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedBelow = 5;
         double actualBelow = service.belowAverage(sales);
@@ -78,7 +78,7 @@ public class StatsServiceTest {
     public void monthsWithAboveAverageSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedAbove = 5;
         double actualAbove = service.aboveAverage(sales);
